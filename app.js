@@ -2,6 +2,7 @@
 // Parámetros de revisión de diseño:
 //   ?demo      precarga los datos de ejemplo del estado «completa» de Figma
 //   ?errores   lo mismo, con la fecha, el RUT y el correo con error de formato
+//   ?menor18   igual que ?errores, pero con una fecha real de alguien menor de 18
 //   ?falla     el primer envío falla y muestra el error de envío
 //   ?exito     abre directo el éxito · ?caducado abre directo el enlace caducado
 (() => {
@@ -202,7 +203,7 @@
 
   // ── Datos de ejemplo (?demo, ?errores) ───────────
   const set = (id, v) => { const el = $('#' + id); el.value = v; el.dispatchEvent(new Event('input', { bubbles: true })); };
-  if (params.has('demo') || params.has('errores')) {
+  if (params.has('demo') || params.has('errores') || params.has('menor18')) {
     set('nombres', 'Camila Andrea'); set('apellido1', 'Soto'); set('apellido2', 'Ramírez');
     $('input[name="genero"][value="femenino"]').checked = true;
     set('nacimiento', '12031988'); set('rut', '123456785'); set('correo', 'camila.soto@correo.cl');
@@ -214,6 +215,11 @@
   // Valores con error de formato del estado «error» de Figma
   if (params.has('errores')) {
     set('nacimiento', '31201988'); set('rut', '123456780'); set('correo', 'camila.soto@correo');
+    ['#nacimiento', '#rut', '#correo'].forEach(s => { const f = $(s).closest('.field'); f.dataset.touched = '1'; marcar(f); });
+  }
+  // Fecha real de alguien menor de 18: mensaje propio de la regla de edad
+  if (params.has('menor18')) {
+    set('nacimiento', '01012020'); set('rut', '123456780'); set('correo', 'camila.soto@correo');
     ['#nacimiento', '#rut', '#correo'].forEach(s => { const f = $(s).closest('.field'); f.dataset.touched = '1'; marcar(f); });
   }
   actualizar();

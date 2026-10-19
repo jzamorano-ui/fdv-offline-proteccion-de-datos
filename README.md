@@ -14,7 +14,8 @@ Se abren agregando un parámetro a la URL.
 |---|---|---|
 | Formulario vacío | `/` | Formulario · vacío |
 | Formulario completo | `/?demo` | Formulario · completo |
-| Error en campos (fecha, RUT, correo) | `/?errores` | Formulario · error en campos |
+| Error en campos (fecha inválida, RUT, correo) | `/?errores` | Formulario · error en campos · fecha inválida |
+| Error en campos (menor de 18 años, RUT, correo) | `/?menor18` | Formulario · error en campos · menor de 18 |
 | Envío con error, con reintento | `/?demo&falla` | Envío · error |
 | Envío exitoso | `/?exito` | Envío · éxito |
 | Enlace caducado | `/?caducado` | Enlace · caducado |
