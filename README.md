@@ -2,19 +2,9 @@
 
 Prototipo funcional de la landing a la que llega una persona desde el enlace que le envía un asesor por correo. Es HTML, CSS y JS sin backend: el envío y el captcha están simulados.
 
-- **Prototipo publicado:** https://jzamorano-ui.github.io/fdv-offline-proteccion-de-datos/ _(se activa al publicar)_
+- **Prototipo publicado:** https://jzamorano-ui.github.io/fdv-offline-proteccion-de-datos/
 - **Diseño (Figma, handoff):** https://www.figma.com/design/23oW4hxMY3pQNdfdCTTtRJ
 - **Historia de usuario:** https://alemana.atlassian.net/browse/VDV-5163
-
-## Cómo verlo
-
-Abre `index.html` con un servidor estático (los videos y el calendario no cargan bien desde `file://`):
-
-```
-python3 -m http.server 8000
-```
-
-Luego entra a http://localhost:8000. No hay que instalar nada.
 
 ## Estados de pantalla
 
