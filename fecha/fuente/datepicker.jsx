@@ -174,7 +174,7 @@ function Calendario() {
         view={view}
         onViewChange={v => { if (v === 'day') setMes(true); setView(v); }}
         openTo="day"
-        referenceDate={dayjs().subtract(30, 'year')}
+        referenceDate={dayjs()}
         minDate={MIN}
         maxDate={dayjs()}
         closeOnSelect={false}
