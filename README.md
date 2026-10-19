@@ -37,8 +37,8 @@ Los textos legales de los consentimientos son referenciales: los define Legal.
 
 | Archivo | Formato | Peso | Uso |
 |---|---|---|---|
-| `assets/ilustraciones/ilustracion-exito.png` | PNG | 22 KB | Pantalla de éxito |
-| `assets/ilustraciones/ilustracion-error.png` | PNG | 20 KB | Pantallas de error de envío y enlace caducado |
+| `assets/ilustraciones/ilustracion-exito.svg` | SVG | 21 KB | Pantalla de éxito |
+| `assets/ilustraciones/ilustracion-error.svg` | SVG | 58 KB | Pantallas de error de envío y enlace caducado |
 | `assets/video/hero-desktop.mp4` | MP4 1920×1080 | 3,8 MB | Video del encabezado en pantallas desde 900 px |
 | `assets/video/hero-mobile.mp4` | MP4 1080×1000 | 2,5 MB | Video del encabezado en pantallas menores a 900 px |
 
