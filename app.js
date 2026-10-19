@@ -12,7 +12,7 @@
   const video = $('#hero');
   const mq = matchMedia('(min-width: 900px)');
   const setVideo = () => {
-    const src = mq.matches ? 'assets/hero-desktop.mp4' : 'assets/hero-mobile.mp4';
+    const src = mq.matches ? 'assets/video/hero-desktop.mp4' : 'assets/video/hero-mobile.mp4';
     if (!video.src.endsWith(src)) { video.src = src; video.play().catch(() => {}); }
   };
   setVideo();
