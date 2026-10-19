@@ -44,13 +44,12 @@ Los textos legales de los consentimientos son referenciales: los define Legal.
 
 | Archivo | Formato | Peso | Uso |
 |---|---|---|---|
-| `assets/svg/logo-esencial.svg` | SVG | 17 KB | Logo del encabezado |
-| `assets/svg/logo-footer.svg` | SVG | 14 KB | Logo del pie de página |
 | `assets/ilustraciones/ilustracion-exito.png` | PNG | 22 KB | Pantalla de éxito |
 | `assets/ilustraciones/ilustracion-error.png` | PNG | 20 KB | Pantallas de error de envío y enlace caducado |
-| `assets/img/recaptcha-logo.png` | PNG | 7 KB | Captcha simulado |
 | `assets/video/hero-desktop.mp4` | MP4 1920×1080 | 3,8 MB | Video del encabezado en pantallas desde 900 px |
 | `assets/video/hero-mobile.mp4` | MP4 1080×1000 | 2,5 MB | Video del encabezado en pantallas menores a 900 px |
+
+Los logos y la imagen del captcha simulado (`assets/svg/`, `assets/img/`) solo sirven al prototipo; dev no los necesita.
 
 Los videos se comprimieron con H.264 (CRF 25), sin audio y con la misma resolución y duración que el original (PSNR sobre 44 dB). Las ilustraciones salen de la sección de assets del handoff (`Plataforma · Asset · Ilustración · estado`).
 
