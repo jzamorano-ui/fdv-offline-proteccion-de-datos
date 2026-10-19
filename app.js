@@ -12,7 +12,7 @@
   const video = $('#hero');
   const mq = matchMedia('(min-width: 900px)');
   const setVideo = () => {
-    const src = mq.matches ? 'assets/video/hero-desktop.mp4' : 'assets/video/hero-mobile.mp4';
+    const src = mq.matches ? 'assets/hero-desktop.mp4' : 'assets/hero-mobile.mp4';
     if (!video.src.endsWith(src)) { video.src = src; video.play().catch(() => {}); }
   };
   setVideo();
@@ -74,13 +74,21 @@
     fecha.value = [d.slice(0, 2), d.slice(2, 4), d.slice(4, 8)].filter(Boolean).join('/');
   });
   // El calendario (fecha/datepicker.bundle.js) lee este campo al abrir y escribe dd/mm/aaaa al guardar
-  // dd/mm/aaaa con año completo: desde 1900 y no futura
+  // dd/mm/aaaa con año completo: desde 1900, no futura y con 18 años cumplidos o más
   function fechaValida(v) {
     const m = v.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
     if (!m) return false;
     const [dd, mm, aaaa] = [+m[1], +m[2], +m[3]];
     const f = new Date(aaaa, mm - 1, dd);
-    return aaaa >= 1900 && f.getMonth() === mm - 1 && f.getDate() === dd && f <= new Date();
+    const limite = new Date(); limite.setFullYear(limite.getFullYear() - 18);
+    return aaaa >= 1900 && f.getMonth() === mm - 1 && f.getDate() === dd && f <= limite;
+  }
+  // Fecha real y no futura, pero de alguien menor de 18: tiene su propio mensaje
+  function fechaMenor(v) {
+    const m = v.match(/^(\d{2})\/(\d{2})\/(\d{4})$/);
+    if (!m) return false;
+    const f = new Date(+m[3], +m[2] - 1, +m[1]);
+    return +m[3] >= 1900 && f.getMonth() === +m[2] - 1 && f.getDate() === +m[1] && f <= new Date() && !fechaValida(v);
   }
 
   const ingreso = $('#ingreso');
@@ -104,6 +112,7 @@
   const marcar = f => {
     if (!conFormato.includes(f.dataset.kind)) return;
     const inp = $('input', f), malo = !!inp.value.trim() && !valido(f);
+    if (f.dataset.kind === 'fecha') $('.err', f).lastChild.textContent = fechaMenor(inp.value) ? 'Ingresa una fecha mayor o igual a 18 años' : 'Ingresa una fecha válida';
     f.classList.toggle('is-invalid', malo);
     if (malo) { inp.setAttribute('aria-invalid', 'true'); inp.setAttribute('aria-describedby', $('.err', f).id); }
     else { inp.removeAttribute('aria-invalid'); inp.removeAttribute('aria-describedby'); }
