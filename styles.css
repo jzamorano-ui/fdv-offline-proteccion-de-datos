@@ -203,7 +203,7 @@ fieldset.field > legend { margin-bottom: 16px; } /* Figma: Género 24 + 16 + 24 
 .btn:focus-visible { outline: 2px solid var(--fill-primary-default); outline-offset: 2px; }
 .btn.sending { height: 49px; cursor: progress; background: var(--cta-bg); }
 .btn.sending .txt { display: none; }
-.btn .spin { display: none; width: 17px; height: 17px; border: 2px solid rgba(255, 255, 255, .35); border-top-color: #fff; border-radius: 50%; animation: spin .8s linear infinite; }
+.btn .spin { display: none; width: 17px; height: 17px; border: 2px solid #fff; border-right-color: transparent; border-radius: 50%; animation: spin .8s linear infinite; }
 .btn.sending .spin { display: block; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
