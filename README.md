@@ -64,8 +64,3 @@ fecha/              Calendario (MUI X) y listas desplegables, ya compilados
 fecha/fuente/       Código fuente del calendario, para recompilar con npm run build
 assets/             Logos, ilustraciones, imágenes y videos
 ```
-
-## Pendientes
-
-- El enlace «ingresando aquí» de los derechos apunta a `#` hasta que exista el destino del Centro de Privacidad.
-- Los textos de los consentimientos, su cantidad de casillas y su gestión en Soyio los define Legal.
