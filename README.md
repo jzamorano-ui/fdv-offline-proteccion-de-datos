@@ -51,7 +51,7 @@ Los textos legales de los consentimientos son referenciales: los define Legal.
 
 Los logos y la imagen del captcha simulado (`assets/svg/`, `assets/img/`) solo sirven al prototipo; dev no los necesita.
 
-Los videos se comprimieron con H.264 (CRF 25), sin audio y con la misma resolución y duración que el original (PSNR sobre 44 dB). Las ilustraciones salen de la sección de assets del handoff (`Plataforma · Asset · Ilustración · estado`).
+Los videos están comprimidos (H.264, sin audio). Las ilustraciones salen del handoff, en la sección de assets.
 
 ## Estructura
 
