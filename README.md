@@ -2,6 +2,8 @@
 
 Prototipo funcional de la landing a la que llega una persona desde el enlace que le envía un asesor por correo. Es HTML, CSS y JS sin backend: el envío y el captcha están simulados.
 
+> **Es solo una visualización funcional.** Sirve para ver cómo se comporta la pantalla, no representa el código final: dev implementa la landing con su propia tecnología y guía de estilos, tomando de aquí el comportamiento y los assets.
+
 - **Prototipo publicado:** https://jzamorano-ui.github.io/fdv-offline-proteccion-de-datos/
 - **Diseño (Figma, handoff):** https://www.figma.com/design/23oW4hxMY3pQNdfdCTTtRJ
 - **Historia de usuario:** https://alemana.atlassian.net/browse/VDV-5163
