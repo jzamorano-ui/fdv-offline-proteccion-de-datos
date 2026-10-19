@@ -1,0 +1,53 @@
+/* Tokens Neo (colección Semantics de OPS-Library-Neo Tokens), valores del 16-10-2026.
+   Excepciones acordadas: ilustraciones (librería CROSS) y el coral del texto principal (text/base/brand). */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700&display=swap');
+
+:root {
+  --surface-base-default: #ffffff;
+  --fill-base-light: #f7f7f7;
+  --fill-base-medium: #e7e7e7;
+  --fill-base-strong: #737373;
+  --fill-primary-default: #1f3644;
+  --fill-primary-hover: #304d5f;
+  --fill-secondary-default: #e2e9ee;
+  --fill-semantic-success-soft: #f3f9f3;
+  --fill-semantic-error-soft: #fef2f2;
+  --text-base-default: #0f202b;
+  --text-base-secondary: #5c5c5c;
+  --text-base-contrast: #ffffff;
+  --text-base-brand: #ff585c;
+  --text-semantic-success: #00531d;
+  --text-semantic-error: #8f1421;
+  --icon-base-default: #0f202b;
+  --icon-base-secondary: #737373;
+  --icon-semantic-success: #006b27;
+  --icon-semantic-error: #b71c2c;
+  --border-base-default: #8f8f8f;
+  --border-base-secondary: #e7e7e7;
+  --border-base-disabled: #e7e7e7;
+  --icon-base-disabled: #c9c9c9;
+  --footer-bg: #1a1b28;
+
+  --space-xs: 4px; --space-sm: 8px; --space-md: 16px; --space-lg: 24px;
+  --space-xl: 32px; --space-2xl: 40px; --space-3xl: 48px;
+  --radius-sm: 8px; --radius-md: 12px; --radius-lg: 24px;
+  --font: 'Noto Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+/* Estilos de texto Neo */
+.headline-sm { font: 700 32px/40px var(--font); }
+.title-lg    { font: 700 24px/32px var(--font); }
+.title-sm    { font: 700 18px/26px var(--font); }
+.body-xl     { font: 400 20px/28px var(--font); }
+.body-lg     { font: 400 16px/24px var(--font); }
+.body-lg-b   { font: 700 16px/24px var(--font); }
+.body-md     { font: 400 14px/20px var(--font); }
+.body-md-b   { font: 700 14px/20px var(--font); }
+.caption-sm  { font: 400 12px/16px var(--font); }
+.caption-sm-m{ font: 500 12px/16px var(--font); }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; font: 400 16px/24px var(--font); color: var(--text-base-default); background: var(--surface-base-default); }
+a { color: inherit; }
+button, input, select { font: inherit; color: inherit; }

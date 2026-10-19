@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Landing offline · Isapre Esencial</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="tokens.css?v=20261019o">
+<link rel="stylesheet" href="styles.css?v=20261019o">
+</head>
+<body>
+
+<!-- Íconos (24 px, viewBox 0 0 24 24) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-mega" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M20.1797 3.37323C20.471 3.41535 20.75 3.51725 20.999 3.67205L21.1045 3.74237L21.1064 3.74334C21.3469 3.91468 21.5484 4.13417 21.6992 4.3869L21.7607 4.49725L21.8633 4.72869C21.9519 4.96443 21.9989 5.21464 22 5.46795V17.2521C21.9987 17.5479 21.9353 17.8395 21.8154 18.1086L21.7607 18.2219C21.6052 18.5216 21.3813 18.7809 21.1064 18.9767L21.1055 18.9758C20.8337 19.1716 20.5198 19.3022 20.1885 19.3537C19.8552 19.4056 19.5143 19.3762 19.1943 19.2707L8.30859 15.6428H6.97266V16.3762C6.97269 16.7543 7.04769 17.1294 7.19238 17.4787C7.33709 17.8279 7.54922 18.1451 7.81641 18.4123C8.0837 18.6796 8.40155 18.8924 8.75098 19.0373C9.10039 19.1819 9.4755 19.256 9.85352 19.256C10.2385 19.2562 10.5505 19.5683 10.5508 19.9533C10.5508 20.3385 10.2387 20.6514 9.85352 20.6515C9.29221 20.6515 8.73626 20.541 8.21777 20.3264C7.69919 20.1114 7.22717 19.7958 6.83008 19.3986C6.43319 19.0018 6.11817 18.5313 5.90332 18.0129C5.68848 17.4942 5.57719 16.9375 5.57715 16.3762V15.5842C4.70234 15.4393 3.88717 15.0259 3.25195 14.3908C2.85501 13.9938 2.54004 13.5218 2.3252 13.0031C2.11043 12.4845 2.00004 11.9286 2 11.3674C2 10.2336 2.45034 9.14571 3.25195 8.34393C3.64879 7.94714 4.12024 7.63201 4.63867 7.41717C5.15728 7.20235 5.71408 7.09105 6.27539 7.091H8.31055L19.1885 3.466C19.5068 3.35753 19.8468 3.32515 20.1797 3.37323ZM19.9795 4.75409C19.8649 4.73759 19.7473 4.74797 19.6377 4.78534L19.6338 4.78729L9.12012 8.29119V14.4426L19.6309 17.9465C19.7412 17.9828 19.8601 17.9917 19.9746 17.9738L20.0586 17.9562C20.142 17.933 20.2214 17.895 20.292 17.8439L20.2969 17.84C20.3915 17.7726 20.4688 17.6835 20.5225 17.5803L20.5576 17.5002C20.5877 17.4201 20.6037 17.3351 20.6045 17.2492V5.47381L20.5996 5.3869C20.5889 5.30095 20.5626 5.21729 20.5225 5.13983C20.4688 5.03687 20.3912 4.94734 20.2969 4.88006C20.2026 4.81391 20.0934 4.77053 19.9795 4.75409ZM6.27539 8.48651C5.89731 8.48656 5.52216 8.56154 5.17285 8.70623C4.82371 8.85092 4.50654 9.06306 4.23926 9.33026C3.69913 9.87039 3.39551 10.6035 3.39551 11.3674C3.39555 11.7453 3.46966 12.1197 3.61426 12.4689C3.75896 12.8183 3.97192 13.1361 4.23926 13.4035C4.77925 13.9433 5.51184 14.2471 6.27539 14.2472H7.72461V8.48651H6.27539Z"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M11.9994 12.9489L16.9491 7.99914L18.3633 9.41334L11.9994 15.7773L5.63537 9.41334L7.04957 7.99914L11.9994 12.9489Z"/></symbol>
+  <symbol id="i-box-off" viewBox="0 0 24 24"><path d="M4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3ZM5 5V19H19V5H5Z"/></symbol>
+  <symbol id="i-box-on" viewBox="0 0 24 24"><path d="M4 3H20C20.5523 3 21 3.44772 21 4V20C21 20.5523 20.5523 21 20 21H4C3.44772 21 3 20.5523 3 20V4C3 3.44772 3.44772 3 4 3ZM11.0026 16L18.0737 8.92893L16.6595 7.51472L11.0026 13.1716L8.17421 10.3431L6.75999 11.7574L11.0026 16Z"/></symbol>
+  <symbol id="i-radio-off" viewBox="0 0 24 24"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z"/></symbol>
+  <!-- calendar-2-line (Remix), el ícono «calendar» del Date input de AquaDS -->
+  <symbol id="i-cal" viewBox="0 0 24 24"><path d="M9 1V3H15V1H17V3H21C21.5523 3 22 3.44772 22 4V20C22 20.5523 21.5523 21 21 21H3C2.44772 21 2 20.5523 2 20V4C2 3.44772 2.44772 3 3 3H7V1H9ZM20 11H4V19H20V11ZM7 5H4V9H20V5H17V7H15V5H9V7H7V5Z"/></symbol>
+  <!-- Error de formato (Figma, 22 px) -->
+  <symbol id="i-err" viewBox="0 0 22 22"><path d="M10.9987 20.1654C5.93609 20.1654 1.83203 16.0613 1.83203 10.9987C1.83203 5.93609 5.93609 1.83203 10.9987 1.83203C16.0613 1.83203 20.1654 5.93609 20.1654 10.9987C20.1654 16.0613 16.0613 20.1654 10.9987 20.1654ZM10.082 13.7487V15.582H11.9154V13.7487H10.082ZM10.082 6.41536V11.9154H11.9154V6.41536H10.082Z"/></symbol>
+  <symbol id="i-clip" viewBox="0 0 20 20"><path d="M12.516 8.45801C12.7085 8.20122 13.0729 8.1492 13.3298 8.34163C13.5865 8.53421 13.6393 8.89858 13.4469 9.15544L9.86865 13.9259C9.6835 14.1726 9.33756 14.2321 9.08089 14.061L7.29216 12.8688C7.02502 12.6907 6.95301 12.3295 7.13102 12.0623C7.3091 11.7952 7.66954 11.7232 7.93669 11.9012L9.26807 12.7882L12.516 8.45801Z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M11.7892 1.66602C12.5647 1.66624 13.2223 2.16469 13.4632 2.85824H15.068C15.5385 2.85824 15.9902 3.04552 16.3229 3.37826C16.6554 3.71088 16.8429 4.16261 16.8429 4.63314V16.5586C16.8429 17.0289 16.6554 17.4809 16.3229 17.8135C15.9903 18.146 15.5384 18.3327 15.068 18.3327H4.93132C4.46086 18.3326 4.009 18.146 3.67643 17.8135C3.34378 17.4809 3.15731 17.0289 3.15723 16.5586V4.63314C3.15723 4.16274 3.34391 3.71092 3.67643 3.37826C4.00905 3.04567 4.46092 2.85831 4.93132 2.85824H6.53695C6.77796 2.16469 7.43534 1.6661 8.21094 1.66602H11.7892ZM4.93132 4.02116C4.76933 4.02124 4.61294 4.08564 4.49837 4.2002C4.3839 4.31481 4.32015 4.47116 4.32015 4.63314V16.5586C4.32023 16.7204 4.38411 16.8763 4.49837 16.9907C4.61299 17.1053 4.76937 17.1697 4.93132 17.1698H15.068C15.23 17.1698 15.3856 17.1051 15.5002 16.9907C15.6146 16.8762 15.6799 16.7205 15.68 16.5586V4.63314C15.68 4.4914 15.6307 4.35375 15.5417 4.24495L15.5002 4.2002C15.3857 4.08585 15.23 4.02116 15.068 4.02116H13.5625V4.03662C13.5623 5.01603 12.7686 5.80961 11.7892 5.8099H8.21094C7.2314 5.80979 6.43704 5.01614 6.43685 4.03662V4.02116H4.93132ZM8.21094 2.82894C7.87356 2.82904 7.59993 3.10274 7.59977 3.4401V4.03662C7.59997 4.37395 7.87359 4.64687 8.21094 4.64697H11.7892C12.1264 4.64669 12.3994 4.37383 12.3996 4.03662V3.4401C12.3994 3.10286 12.1264 2.82923 11.7892 2.82894H8.21094Z"/></symbol>
+  <symbol id="i-radio-on" viewBox="0 0 24 24"><path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20Z"/><path d="M12 17C9.23858 17 7 14.7614 7 12C7 9.23858 9.23858 7 12 7C14.7614 7 17 9.23858 17 12C17 14.7614 14.7614 17 12 17Z"/></symbol>
+</svg>
+
+<header class="topbar">
+  <img src="assets/svg/logo-esencial.svg" alt="Isapre Esencial" width="150" height="32">
+</header>
+
+<div class="hero">
+  <video id="hero" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+</div>
+
+<main class="sheet">
+
+  <!-- ═══ Vista 1: formulario ═══ -->
+  <div class="wrap" id="vista-form">
+    <section class="intro">
+      <h1><span class="brand">En Isapre Esencial</span>, cuidamos tu salud y bienestar</h1>
+      <hr class="divider divider-intro">
+      <p>Con coberturas claras, prevención y una amplia red de prestadores, con el respaldo del Grupo Alemana.</p>
+    </section>
+
+    <form class="card" id="form" novalidate>
+      <div class="card-head">
+        <h2>Ingresa tus datos</h2>
+        <p>Completa este formulario para una mejor asesoría.</p>
+      </div>
+      <hr class="divider">
+
+      <!-- Solo RUT, fecha y correo muestran error, y solo por formato: un campo vacío no da error,
+           los obligatorios solo mantienen deshabilitado el botón -->
+      <div class="fields">
+        <div class="field" data-req>
+          <label class="field-label" for="nombres">Nombres</label>
+          <input class="input" id="nombres" name="nombres" placeholder="Ingresa tus nombres" autocomplete="given-name">
+        </div>
+        <div class="field" data-req>
+          <label class="field-label" for="apellido1">Primer apellido</label>
+          <input class="input" id="apellido1" name="apellido1" placeholder="Ingresa tu primer apellido" autocomplete="family-name">
+        </div>
+        <div class="field">
+          <label class="field-label" for="apellido2">Segundo apellido <span class="opt">Opcional</span></label>
+          <input class="input" id="apellido2" name="apellido2" placeholder="Ingresa tu segundo apellido">
+        </div>
+        <fieldset class="field" data-req data-kind="genero">
+          <legend class="field-label">Género</legend>
+          <div class="radios">
+            <label class="choice"><input type="radio" name="genero" value="masculino"><svg aria-hidden="true"><use class="off" href="#i-radio-off"/><use class="on" href="#i-radio-on"/></svg>Masculino</label>
+            <label class="choice"><input type="radio" name="genero" value="femenino"><svg aria-hidden="true"><use class="off" href="#i-radio-off"/><use class="on" href="#i-radio-on"/></svg>Femenino</label>
+          </div>
+        </fieldset>
+        <div class="field" data-req data-kind="rut">
+          <label class="field-label" for="rut">RUT</label>
+          <input class="input" id="rut" name="rut" placeholder="Ej: 11.111.111-k" maxlength="12" autocomplete="off">
+          <p class="err" id="rut-err"><svg aria-hidden="true"><use href="#i-err"/></svg>Ingresa un RUT válido</p>
+        </div>
+        <div class="field" data-req data-kind="fecha">
+          <label class="field-label" for="nacimiento">Fecha de nacimiento</label>
+          <!-- Se escribe dd/mm/aaaa o se elige en el calendario (DatePicker de MUI con la anatomía del
+               Date picker de AquaDS, ver fecha/). El ícono y el separador siguen al Date input de AquaDS -->
+          <div class="input-icon">
+            <input class="input" id="nacimiento" name="nacimiento" placeholder="dd/mm/aaaa" inputmode="numeric" maxlength="10" autocomplete="bday">
+            <button type="button" class="cal-btn" id="cal-btn" aria-label="Abrir calendario" aria-haspopup="dialog"><svg aria-hidden="true"><use href="#i-cal"/></svg></button>
+          </div>
+          <p class="err" id="nacimiento-err"><svg aria-hidden="true"><use href="#i-err"/></svg>Ingresa una fecha válida</p>
+        </div>
+        <div class="field" data-req data-kind="correo">
+          <label class="field-label" for="correo">Correo electrónico</label>
+          <input class="input" id="correo" name="correo" type="email" placeholder="Ej: nombre@correo.cl" autocomplete="email">
+          <p class="err" id="correo-err"><svg aria-hidden="true"><use href="#i-err"/></svg>Ingresa un correo válido</p>
+        </div>
+        <div class="field" data-req data-kind="ingreso">
+          <label class="field-label" for="ingreso">Ingreso mensual (bruto)</label>
+          <input class="input" id="ingreso" name="ingreso" placeholder="Ej: $1.500.000" inputmode="numeric" maxlength="14">
+        </div>
+        <div class="field" data-req>
+          <label class="field-label" id="region-lbl">Región</label>
+          <!-- Desplegable de AquaDS (fecha/desplegable.jsx): el botón abre la lista y el select oculto guarda el valor -->
+          <button type="button" class="input dd-btn" id="region-btn" role="combobox" aria-labelledby="region-lbl" aria-haspopup="listbox" aria-expanded="false">Selecciona tu región</button>
+          <select id="region" name="region" hidden><option value="">Selecciona tu región</option></select>
+        </div>
+        <div class="field is-disabled" data-req>
+          <label class="field-label" id="ciudad-lbl">Ciudad</label>
+          <!-- Deshabilitado sin texto, como en Figma; el placeholder aparece al elegir región -->
+          <button type="button" class="input dd-btn" id="ciudad-btn" role="combobox" aria-labelledby="ciudad-lbl" aria-haspopup="listbox" aria-expanded="false" disabled></button>
+          <select id="ciudad" name="ciudad" hidden disabled><option value=""></option></select>
+        </div>
+        <div class="field">
+          <label class="field-label" for="direccion">Dirección <span class="opt">Opcional</span></label>
+          <input class="input" id="direccion" name="direccion" placeholder="Ingresa tu dirección" autocomplete="street-address">
+        </div>
+      </div>
+
+      <!-- ConsentBox de Soyio. «Más información» replica la variante MoreInfo=True del componente
+           ConsentBox/Soyio (2652:8932): el mismo contenido en los dos, como en Figma. -->
+      <section class="consents" aria-label="Consentimientos">
+        <div class="cbox">
+          <div class="cbox-top">
+            <svg aria-hidden="true"><use href="#i-mega"/></svg>
+            <h3 id="c1-t">Comunicaciones por correo y teléfono</h3>
+            <span class="chip">Requerido</span>
+          </div>
+          <div class="cbox-body">
+            <label class="choice"><input type="checkbox" id="c1" name="c1" required aria-required="true" aria-labelledby="c1-t" aria-describedby="c1-d"><svg aria-hidden="true"><use class="off" href="#i-box-off"/><use class="on" href="#i-box-on"/></svg></label>
+            <div class="cbox-text">
+              <label class="clause" for="c1" id="c1-d">Quiero recibir información sobre planes, productos y beneficios de Isapre Esencial por correo electrónico, teléfono, SMS o mensajería.</label>
+              <button type="button" class="more" aria-expanded="false" aria-controls="c1-more"><span>Más información</span><svg aria-hidden="true"><use href="#i-chev"/></svg></button>
+            </div>
+          </div>
+          <div class="more-panel" id="c1-more" hidden></div>
+        </div>
+
+        <div class="cbox">
+          <div class="cbox-top">
+            <svg aria-hidden="true"><use href="#i-mega"/></svg>
+            <h3 id="c2-t">Compartir con Grupo Alemana</h3>
+            <span class="chip">Opcional</span>
+          </div>
+          <div class="cbox-body">
+            <label class="choice"><input type="checkbox" id="c2" name="c2" aria-labelledby="c2-t" aria-describedby="c2-d"><svg aria-hidden="true"><use class="off" href="#i-box-off"/><use class="on" href="#i-box-on"/></svg></label>
+            <div class="cbox-text">
+              <label class="clause" for="c2" id="c2-d"><span>Autorizo a Isapre Esencial para comunicar mi nombre, mi correo electrónico, mi teléfono y mi comuna a las siguientes empresas del Grupo, para que puedan ofrecerme sus productos y beneficios:</span><span>·&nbsp; [Razón social de la filial 1] — [finalidad concreta]</span><span>·&nbsp; [Razón social de la filial 2] — [finalidad concreta]</span><span>·&nbsp; [Razón social de la filial 3] — [finalidad concreta]</span></label>
+              <button type="button" class="more" aria-expanded="false" aria-controls="c2-more"><span>Más información</span><svg aria-hidden="true"><use href="#i-chev"/></svg></button>
+            </div>
+          </div>
+          <div class="more-panel" id="c2-more" hidden></div>
+        </div>
+      </section>
+
+      <div class="submit-row">
+        <div class="captcha">
+          <button type="button" id="captcha" role="checkbox" aria-checked="false" aria-labelledby="cap-l"></button>
+          <span class="lbl" id="cap-l">No soy un robot</span>
+          <img src="assets/img/recaptcha-logo.png" alt="">
+          <span class="brand">reCAPTCHA</span>
+        </div>
+        <button type="submit" class="btn" id="enviar" disabled><span class="txt">Confirmar y enviar</span><span class="spin" aria-hidden="true"></span><span class="sr-only" id="enviando" hidden>Enviando</span></button>
+      </div>
+    </form>
+  </div>
+
+  <!-- ═══ Vista 2: estados finales (éxito, error de envío, enlace caducado) ═══ -->
+  <section class="state" id="vista-exito" hidden tabindex="-1" aria-labelledby="exito-t">
+    <div class="state-head">
+      <svg class="curve curve-m" viewBox="0 0 375 19.085" preserveAspectRatio="none" aria-hidden="true"><path d="M375 19.085H0V0C49.1635 3.15451 115.066 5.08496 187.5 5.08496C259.934 5.08496 325.837 3.15451 375 0V19.085Z"/></svg>
+      <svg class="curve curve-d" viewBox="0 0 1280 34" preserveAspectRatio="none" aria-hidden="true"><path d="M1280 34H0V0C167.811 7.78817 392.758 12.5558 640 12.5558C887.242 12.5558 1112.19 7.78817 1280 0V34Z"/></svg>
+      <img src="assets/ilustraciones/ilustracion-exito.png" alt="">
+    </div>
+    <div class="state-body">
+      <div class="state-msg">
+        <h1 id="exito-t">¡Datos enviados con éxito!</h1>
+        <p><strong>En los próximos minutos un asesor se pondrá en contacto</strong> para entregarte más información sobre nuestros planes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Error de envío: «Volver a intentar» regresa al formulario con los datos ingresados -->
+  <section class="state is-error" id="vista-error" hidden tabindex="-1" aria-labelledby="error-t">
+    <div class="state-head">
+      <svg class="curve curve-m" viewBox="0 0 375 19.085" preserveAspectRatio="none" aria-hidden="true"><path d="M375 19.085H0V0C49.1635 3.15451 115.066 5.08496 187.5 5.08496C259.934 5.08496 325.837 3.15451 375 0V19.085Z"/></svg>
+      <svg class="curve curve-d" viewBox="0 0 1280 34" preserveAspectRatio="none" aria-hidden="true"><path d="M1280 34H0V0C167.811 7.78817 392.758 12.5558 640 12.5558C887.242 12.5558 1112.19 7.78817 1280 0V34Z"/></svg>
+      <img src="assets/ilustraciones/ilustracion-error.png" alt="">
+    </div>
+    <div class="state-body">
+      <div class="state-msg">
+        <h1 id="error-t">¡Ocurrió un problema al enviar tus&nbsp;datos!</h1>
+        <p><strong>No pudimos enviar tu información.</strong> Revisa tu conexión a internet <br class="br-d">e inténtalo nuevamente.</p>
+      </div>
+      <button type="button" class="btn" id="reintentar">Volver a intentar</button>
+    </div>
+  </section>
+
+  <!-- Enlace caducado (48 h): sin acción en pantalla, la salida es el correo del asesor -->
+  <section class="state is-error" id="vista-caducado" hidden tabindex="-1" aria-labelledby="caducado-t">
+    <div class="state-head">
+      <svg class="curve curve-m" viewBox="0 0 375 19.085" preserveAspectRatio="none" aria-hidden="true"><path d="M375 19.085H0V0C49.1635 3.15451 115.066 5.08496 187.5 5.08496C259.934 5.08496 325.837 3.15451 375 0V19.085Z"/></svg>
+      <svg class="curve curve-d" viewBox="0 0 1280 34" preserveAspectRatio="none" aria-hidden="true"><path d="M1280 34H0V0C167.811 7.78817 392.758 12.5558 640 12.5558C887.242 12.5558 1112.19 7.78817 1280 0V34Z"/></svg>
+      <img src="assets/ilustraciones/ilustracion-error.png" alt="">
+    </div>
+    <div class="state-body">
+      <div class="state-msg">
+        <h1 id="caducado-t">¡Enlace no disponible!</h1>
+        <p><strong>Responde el correo de tu asesor para solicitar un enlace vigente.</strong> <br class="br-d">Tendrás 48 horas para completar tus datos.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="brandline">
+    <img src="assets/svg/logo-footer.svg" alt="Isapre Esencial" width="216" height="46">
+    <span class="vline" aria-hidden="true"></span>
+    <p class="tagline">Lo nuestro<br>es tu bienestar.</p>
+  </div>
+  <p class="more-info">Conoce más sobre nuestros beneficios en <a href="https://www.somosesencial.cl" target="_blank" rel="noopener">www.somosesencial.cl</a></p>
+</footer>
+
+<!-- Contenido de «Más información» (variante MoreInfo=True, texto literal de Figma) -->
+<template id="tpl-more">
+  <div class="item">
+    <h4>Datos requeridos</h4>
+    <div class="chips"><span class="dchip">Nombre</span><span class="dchip">Correo electrónico</span><span class="dchip">Demográfico</span><span class="dchip">Número de teléfono</span></div>
+  </div>
+  <div class="item">
+    <h4>Estos datos se usan para:</h4>
+    <span class="uso"><svg aria-hidden="true"><use href="#i-clip"/></svg>Marketing</span>
+    <p class="lh140">Permite actividades de marketing, promoción, publicidad y ventas para el producto, servicio, aplicación o sistema.</p>
+  </div>
+  <div class="item">
+    <h4>Publicidad</h4>
+    <p>Publicita o promociona el producto, servicio, aplicación o sistema y servicios asociados.</p>
+    <ul>
+      <li><span class="k">Interno:</span> Muestra publicidad basada en datos de primera mano recopilados o derivados sobre el usuario.</li>
+      <li><span class="k">Límite de frecuencia:</span> Restringe el número de veces que se muestra un anuncio específico a un individuo.</li>
+      <li><span class="k">Segmentación negativa:</span> Aplica reglas para asegurar que cierta audiencia o grupo no sea objetivo de publicidad.</li>
+      <li><span class="k">Perfilamiento:</span> Crea perfiles de audiencia para publicidad dirigida.</li>
+    </ul>
+  </div>
+  <div class="item">
+    <h4>Comunicaciones</h4>
+    <p>Utiliza canales combinados para mensajes y marketing a clientes, usuarios o prospectos.</p>
+    <ul>
+      <li><span class="k">Correo electrónico:</span> Envía comunicaciones de marketing por correo electrónico.</li>
+      <li><span class="k">SMS:</span> Envía comunicaciones de marketing por SMS.</li>
+      <li><span class="k">Llamada telefónica:</span> Realiza llamadas telefónicas.</li>
+      <li><span class="k">WhatsApp:</span> Envía mensajes por WhatsApp.</li>
+    </ul>
+  </div>
+  <p class="rights"><span>Podrás ejercer tus derechos&nbsp;</span><a href="#">ingresando aquí</a></p>
+</template>
+
+<div id="fecha-picker"></div>
+<script src="fecha/datepicker.bundle.js?v=20261019o"></script>
+<script src="app.js?v=20261019o"></script>
+</body>
+</html>

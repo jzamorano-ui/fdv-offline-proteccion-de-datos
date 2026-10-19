@@ -1,0 +1,20 @@
+{
+  "name": "landing-fecha",
+  "private": true,
+  "description": "DatePicker de MUI X para el landing offline. Se empaqueta en un solo archivo para que el prototipo funcione sin conexión.",
+  "scripts": {
+    "build": "esbuild datepicker.jsx --bundle --minify --format=iife --target=es2019 --jsx=automatic --define:process.env.NODE_ENV='\"production\"' --outfile=datepicker.bundle.js"
+  },
+  "dependencies": {
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.1",
+    "@mui/material": "7.3.11",
+    "@mui/x-date-pickers": "8.29.4",
+    "dayjs": "1.11.18",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.25.10"
+  }
+}
